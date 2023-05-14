@@ -1,0 +1,17 @@
+.elements {
+  max-width: 880px;
+  font-family: Inter,Arial,sans-serif;
+  color: #000000;
+}
+
+@media screen and (max-width: 910px) {
+  .elements {
+    margin: 0 27px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .elements {
+    margin: 0 19px;
+  }
+}

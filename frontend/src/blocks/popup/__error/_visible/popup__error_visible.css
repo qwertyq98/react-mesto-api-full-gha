@@ -1,0 +1,8 @@
+.popup__error_visible {
+  color: red;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.52px;
+  opacity: 1;
+}

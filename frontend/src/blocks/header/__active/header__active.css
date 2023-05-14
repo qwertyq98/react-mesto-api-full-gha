@@ -1,0 +1,22 @@
+.header__active {
+  display: none;
+}
+
+@media screen and (max-width: 440px) {
+  .header__active {
+    display: grid;
+    gap: 18px;
+    text-align: center;
+    justify-content: center;
+    font-family: Inter,Arial,sans-serif;
+    color: #FFFFFF;
+    padding: 40px 0;
+    opacity: 0;
+    animation: ani 1.5s forwards;
+  }
+}
+
+@keyframes ani {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}

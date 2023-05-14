@@ -1,0 +1,7 @@
+.popup__button {
+  border: none;
+  outline: none;
+  transition: opacity .2s linear;
+  cursor: pointer;
+  padding: 0;
+}

@@ -1,0 +1,25 @@
+.header__burger {
+  background: url('../../../images/menu.svg') no-repeat;
+  height: 21px;
+  width: 24px;
+  background-size: contain;
+  background-color: transparent;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  border: none;
+  display: none;
+  margin-right: 27px;
+  transition: .2s;
+}
+
+.header__burger:hover {
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 440px) {
+  .header__burger {
+    margin: 0 19px;
+    display: block;
+  }
+}
