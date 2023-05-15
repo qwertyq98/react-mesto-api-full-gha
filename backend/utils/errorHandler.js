@@ -25,7 +25,7 @@ function errorHandler(err, req, res, next) {
 
   if (err instanceof CastError) {
     return res.status(400).send({
-      message: 'Запрашиваемые данные не найдены',
+      message: 'Передан невалидный ID',
     });
   }
 

@@ -1,13 +1,13 @@
 const userRouter = require('express').Router();
 const { celebrate, Joi } = require('celebrate');
 const {
-  getUser, getUserById, updateUser, updateUserAvatar, getUserMeById,
+  getUsers, getUserById, updateUser, updateUserAvatar, getUserMeById,
 } = require('../controllers/users');
 const { LINK_VALIDATOR } = require('../utils/constants');
 
 userRouter.get('/me', getUserMeById);
 
-userRouter.get('/', getUser);
+userRouter.get('/', getUsers);
 
 userRouter.get('/:userId', celebrate({
   params: Joi.object().keys({
