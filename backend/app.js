@@ -9,12 +9,13 @@ const { requestLogger, errorLogger } = require('./middlewares/logger');
 const cors = require('./middlewares/cors');
 
 const {
-  PORT = 3000,
-  MONGODB_URL = 'mongodb://127.0.0.1:27017/mestodb',
+  NODE_ENV,
+  PORT,
+  MONGODB_URL,
 } = process.env;
 const app = express();
 
-mongoose.connect(MONGODB_URL);
+mongoose.connect(NODE_ENV === 'production' ? MONGODB_URL : 'mongodb://127.0.0.1:27017/mestodb');
 
 app.use(cookieParser());
 app.use(express.json());
@@ -29,6 +30,6 @@ app.use(errorLogger);
 app.use(errors());
 app.use(errorHandler);
 
-app.listen(PORT, () => {
+app.listen(NODE_ENV === 'production' ? PORT : 3000, () => {
   console.log(`App listening on port ${PORT}`);
 });
