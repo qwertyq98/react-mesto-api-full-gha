@@ -15,7 +15,7 @@
 
 ### Page screenshot
 
-![Desktop screenshot](./page screenshot/page_screenshot.jpg)
+![Desktop screenshot](https://github.com/qwertyq98/react-mesto-api-full-gha/blob/main/page%20screenshot/page_screenshot.JPG)
 
 ### Используемые технологии
 
