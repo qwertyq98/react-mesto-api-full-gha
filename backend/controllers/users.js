@@ -64,6 +64,9 @@ module.exports.updateUserAvatar = (req, res, next) => {
   const userId = req.user._id;
 
   User.findByIdAndUpdate(userId, { avatar }, { new: true, runValidators: true })
+    .orFail(() => {
+      throw new NotFoundError('Пользователь не существует');
+    })
     .then((user) => res.status(200).send({ data: user }))
     .catch(next);
 };
