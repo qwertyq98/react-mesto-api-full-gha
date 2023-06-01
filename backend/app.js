@@ -30,4 +30,4 @@ app.use(errorLogger);
 app.use(errors());
 app.use(errorHandler);
 
-app.listen(NODE_ENV === 'production' ? PORT : 3000);
+app.listen(NODE_ENV === 'production' ? PORT : 3001);
